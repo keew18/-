@@ -1,0 +1,23 @@
+# Получаем температуру
+temperature = float(input("Введите температуру: "))
+
+# Проверка на наличие осадков
+has_precipitation = input("Есть осадки? (да/нет): ").lower()
+
+# Определение одежды в зависимости от температуры и осадков
+if temperature > 20 and temperature < 30:
+    if has_precipitation == "да":
+        print("Наденьте футболку, шорты и дождевик.")
+    else:
+        print("Наденьте футболку и шорты.")
+elif temperature >= 0 and temperature <= 20:
+    if has_precipitation == "да":
+        heavy_precipitation = input("Сильные осадки? (да/нет): ").lower()
+        if heavy_precipitation == "да":
+            print("Наденьте пальто, резиновые сапоги и возьмите зонт.")
+        else:
+            print("Наденьте пальто и дождевик.")
+    else:
+        print("Наденьте футболку, шорты и дождевик.")
+else:
+    print("Наденьте теплую одежду.")
